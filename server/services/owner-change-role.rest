@@ -1,0 +1,6 @@
+POST http:localhost:3000/api/owner/change-role
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.NjhkNjM2NzVjY2JlMjU1YjE1MTgwY2Fm.VXbwgbe_EIcgUjFtJfO6j8VtgBJjwImnVQw02ICbXN8
+{
+    "user":"68d63675ccbe255b15180caf"
+}
