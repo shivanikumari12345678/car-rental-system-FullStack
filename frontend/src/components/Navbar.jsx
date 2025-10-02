@@ -19,7 +19,7 @@ function Navbar() {
                 toast.error(data.message)
             }
         }catch(e){
-            toast.error(data.message)
+            toast.error(e.message)
         }
     }
   return (
