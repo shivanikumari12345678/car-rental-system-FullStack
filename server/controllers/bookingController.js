@@ -36,13 +36,11 @@ export const createBooking = async (req, res)=>{
     try{
         const {_id}=req.user
         const {car, pickupDate, returnDate}=req.body;
-        console.log("car id from backend", car, typeof car)
         const isAvailable=await checkAvailability(car, pickupDate, returnDate)
         if(!isAvailable){
             return res.json({success:false, message: "Car is not available"})
         }
         const carData = await Car.findById(car)
-        console.log("carDATA frin server",carData)
         //calculate price based on pickupDate and returnDate
         const picked = new Date(pickupDate)
         const returned= new Date(returnDate)
